@@ -1,0 +1,100 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark py-3 bg-black sticky-top">
+    <div class="container">
+        <div>
+            <img src="../../../assets/images/logo.png" class="img-fluid mylogo" alt="">
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Main Navbar -->
+        <div class="collapse navbar-collapse mt-1" id="navbarSupportedContent" *ngIf="!isSublistVisible">
+            <ul class="navbar-nav ms-auto gap-4 mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="">Focus</a>
+                </li>
+
+                <li class="nav-item" (mouseenter)="showDropdown = true" (mouseleave)="showDropdown = false" 
+                    (click)="toggleSublist('solutions')">
+                    <a class="nav-link">
+                        Solutions &nbsp;<fa-icon class="text-white" [icon]="down"></fa-icon>
+                    </a>
+                    <div class="dropdown-container text-white bg-black rounded-3" *ngIf="showDropdown && !isMobileScreen">
+                        <div class="dropdown-content pt-4 pb-3 w-100">
+                            <hr class="text-white">
+                            <ul class="list-unstyled px-3">
+                                <li>Hardware</li>
+                                <li class="mt-2">Software</li>
+                                <li class="mt-2">App Driven Solution</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="">People</a>
+                </li>
+                <li class="nav-item" (mouseenter)="showDropdowntwo = true" (mouseleave)="showDropdowntwo = false"
+                    (click)="toggleSublist('investors')">
+                    <a class="nav-link">
+                        Investors&nbsp;<fa-icon class="text-white" [icon]="down"></fa-icon>
+                    </a>
+                    <div class="dropdown-container text-white bg-black rounded-3" *ngIf="showDropdowntwo && !isMobileScreen">
+                        <div class="dropdown-content pt-4 pb-3 w-100">
+                            <hr class="text-white">
+                            <ul class="list-unstyled px-3">
+                                <li>Company Information</li>
+                                <li class="mt-2">Press Release</li>
+                                <li class="mt-2">SEC Filings</li>
+                                <li class="mt-2">Corporate Governance</li>
+                                <li class="mt-2">Company Leadership</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item" (mouseenter)="showDropdownthree = true" (mouseleave)="showDropdownthree = false"
+                    (click)="toggleSublist('contact')">
+                    <a class="nav-link">
+                        Contact&nbsp;<fa-icon class="text-white" [icon]="down"></fa-icon>
+                    </a>
+                    <div class="dropdown-container text-white bg-black rounded-3" *ngIf="showDropdownthree && !isMobileScreen">
+                        <div class="dropdown-content pt-4 pb-3 w-100">
+                            <hr class="text-white">
+                            <ul class="list-unstyled ps-2 pe-5">
+                                <li>Careers</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Sublist Display -->
+        <div class="sublist-container text-white bg-black rounded-3" *ngIf="isSublistVisible">
+            <div class="dropdown-content pt-4 pb-3 w-100">
+                <hr class="text-white">
+                <ul class="list-unstyled px-3" *ngIf="currentSublist === 'solutions'">
+                    <li>Hardware</li>
+                    <li class="mt-2">Software</li>
+                    <li class="mt-2">App Driven Solution</li>
+                </ul>
+                <ul class="list-unstyled px-3" *ngIf="currentSublist === 'investors'">
+                    <li>Company Information</li>
+                    <li class="mt-2">Press Release</li>
+                    <li class="mt-2">SEC Filings</li>
+                    <li class="mt-2">Corporate Governance</li>
+                    <li class="mt-2">Company Leadership</li>
+                </ul>
+                <ul class="list-unstyled ps-2 pe-5" *ngIf="currentSublist === 'contact'">
+                    <li>Careers</li>
+                </ul>
+                <button class="btn btn-outline-light mt-3" (click)="goBack()">Back</button>
+            </div>
+        </div>
+
+        <div class="ms-3">
+            <fa-icon class="fs-4 text-white" style="cursor: pointer;" [icon]="search"></fa-icon>
+        </div>
+    </div>
+</nav>

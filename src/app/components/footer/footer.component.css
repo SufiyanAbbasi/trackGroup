@@ -1,0 +1,33 @@
+.mybtn {
+    /* margin: 0 8rem; */
+    background-color: #fb4b3a;
+    color: white;
+    height: 50px;
+}
+
+.mybtn:hover {
+    border: 2px solid #fb4b3a;
+    background: white;
+    color: black;
+}
+input:hover{
+    outline: none;
+}
+input:focus{
+    outline: none;
+
+}
+svg{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+svg:hover{
+    color:#fb4b3a;
+}
+ul li{
+    opacity: 0.8;
+}
+ul li:hover{
+    color:#fb4b3a;
+}

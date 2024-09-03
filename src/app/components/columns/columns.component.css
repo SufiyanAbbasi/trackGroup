@@ -1,0 +1,29 @@
+.video-container iframe {
+    width: 390px;
+    height: 250px;
+}
+.background-image-container {
+    min-height: 200px; /* Adjust as needed */
+}
+
+
+
+
+@media screen and (max-width:600px) {
+   
+    .video-container iframe {
+        width: 390px;
+        height: 180px;
+    }
+
+}
+
+@media screen and (max-width:460px) {
+
+
+    .video-container iframe {
+        width: 320px;
+        height: 150px;
+    }
+
+}

@@ -1,0 +1,58 @@
+.click {
+    color: red;
+}
+
+.click:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    display: none;
+}
+
+.mob2 {
+    width: 375px;
+}
+
+.video-container iframe {
+    width: 490px;
+    height: 250px;
+}
+
+.sp{
+    font-weight: 400;
+}
+.sp:hover{
+    color: red;
+    cursor: pointer;
+}
+
+@media screen and (max-width:600px) {
+    .mob2 {
+        width: 200px;
+    }
+
+    .video-container {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .video-container iframe {
+        width: 390px;
+        height: 180px;
+    }
+
+}
+
+@media screen and (max-width:460px) {
+
+
+    .video-container iframe {
+        width: 320px;
+        height: 150px;
+    }
+
+}
